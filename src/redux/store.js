@@ -1,7 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
+import { carsReducer } from "./carsSlice";
 
-const rootReducer = (state, action) => {
-  return state;
+const rootReducer = {
+    cars: carsReducer
 };
 
 export const store = configureStore({
