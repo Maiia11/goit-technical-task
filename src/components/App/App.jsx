@@ -1,9 +1,12 @@
 
 import { useDispatch, useSelector } from 'react-redux'
 import './App.css'
-import { selectCars, selectError, selectLoading } from '../redux/selectors';
+import { selectCars, selectError, selectLoading } from '../../redux/selectors';
 import { useEffect } from 'react';
-import { fetchCampers } from '../redux/operations';
+import { fetchCampers } from '../../redux/operations';
+import { Route, Routes } from 'react-router-dom';
+import HomePage from '../../pages/HomePage/HomePage';
+import Navigation from '../Navigation/Navigation';
 
 function App() {
   const dispatch = useDispatch();
@@ -19,7 +22,10 @@ function App() {
 
   return (
     <div>
-      <p>Hello</p>
+      <Navigation/>
+      <Routes>
+        <Route path='/' element={<HomePage/>} />
+      </Routes>
     </div>
   )
 }

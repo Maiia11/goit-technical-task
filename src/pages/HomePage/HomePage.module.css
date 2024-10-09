@@ -1,0 +1,29 @@
+.container{
+    background-image: url(../../img/Picture.png);
+    width: 1440px;
+    height: 696px;
+}
+
+.title{
+    width: 571px;
+    height: 176px;
+    padding-top: 260px;
+    padding-left: 64px;
+}
+
+.heroText{
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 0.66667;
+    color: #f7f7f7;
+    margin-bottom: 16px;
+
+}
+
+.heroParagraph{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.33333;
+    color: #f7f7f7;
+
+}
