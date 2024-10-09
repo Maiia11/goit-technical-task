@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { carsReducer } from "./carsSlice";
+import { campersReducer } from "./campersSlice";
 
 const rootReducer = {
-    cars: carsReducer
+    campers: campersReducer
 };
 
 export const store = configureStore({

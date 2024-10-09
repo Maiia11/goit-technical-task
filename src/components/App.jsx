@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import './App.css'
 import { selectCars, selectError, selectLoading } from '../redux/selectors';
 import { useEffect } from 'react';
-import { fetchCars } from '../redux/operations';
+import { fetchCampers } from '../redux/operations';
 
 function App() {
   const dispatch = useDispatch();
@@ -13,7 +13,7 @@ function App() {
   const error = useSelector(selectError);
   
   useEffect(() => {
-    dispatch(fetchCars())
+    dispatch(fetchCampers())
   }, [dispatch])
  
 

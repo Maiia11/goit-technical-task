@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchCars } from "./operations";
+import { fetchCampers } from "./operations";
 
-const carsSlice = createSlice({
-    name: "cars",
+const campersSlice = createSlice({
+    name: "campers",
     initialState: {
         items: [],
         isLoading: false,
@@ -10,19 +10,19 @@ const carsSlice = createSlice({
     },
     extraReducers: builder => {
         builder
-            .addCase(fetchCars.pending, (state) => {
+            .addCase(fetchCampers.pending, (state) => {
                 state.isLoading = true;
             })
-            .addCase(fetchCars.fulfilled, (state, action) => {
+            .addCase(fetchCampers.fulfilled, (state, action) => {
                 state.isLoading = false;
                 state.error = null;
                 state.items = action.payload;
             })
-            .addCase(fetchCars.rejected, (state, action) => {
+            .addCase(fetchCampers.rejected, (state, action) => {
                 state.isLoading = false;
                 state.error = action.payload;
         })
     }
 });
 
-export const carsReducer = carsSlice.reducer;
+export const campersReducer = campersSlice.reducer;
