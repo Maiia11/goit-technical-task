@@ -1,3 +1,4 @@
+import CatalogList from "../../components/CatalogList/CatalogList";
 
 export const Catalog = ({ campers }) => {
     console.log("Cars in Catalog:", campers); // Проверяйте, что здесь отображается
@@ -7,12 +8,25 @@ export const Catalog = ({ campers }) => {
     }
   return (
       <div>
+          <p>Location</p>
+          <p>Filters</p>
+          <h2>Vehicle equipment</h2>
+          <button>Ac</button>
+          <button>Authomatic</button>
+          <button>Kitchen</button>
+          <button>TV</button>
+          <button>Bathroom</button>
+          <h2>Vehicle type</h2>
+          <button>Van</button>
+          <button>Fully Integrated</button>
+          <button>Alcove</button>
           <ul>{campers.map((camper) => {
               return (<li key={camper.id}>
-                  <p>{camper.name}</p>
+                  <CatalogList camper={camper} />
               </li>)
              })}   
           </ul>
+          
           </div>
   )
 }
