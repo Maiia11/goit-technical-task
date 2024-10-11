@@ -5,8 +5,6 @@
 }
 
 .title{
-    width: 571px;
-    height: 176px;
     padding-top: 260px;
     padding-left: 64px;
 }
@@ -25,5 +23,18 @@
     font-size: 24px;
     line-height: 1.33333;
     color: #f7f7f7;
+
+}
+
+.btn{
+    border-radius: 200px;
+    width: 173px;
+    height: 56px;
+    background-color: #e44848;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    color: #fff;
 
 }
