@@ -19,7 +19,7 @@ export const Catalog = () => {
                   <CatalogList camper={camper} />
               </li>)
              })}   
-          </ul>
+          </ul> 
           
           </div>
   )

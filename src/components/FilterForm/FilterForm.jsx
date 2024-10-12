@@ -76,6 +76,7 @@ const FilterForm = () => {
                                     />
                                     <span className={css.customCheckbox}>Kitchen</span>
                                 </label>
+
                                 <label className={css.checkboxLabel}>
                                     <Field className={css.checkboxInput}
                                         type="checkbox"
@@ -94,6 +95,40 @@ const FilterForm = () => {
                                         onChange={handleCheckboxChange}
                                     />
                                     <span className={css.customCheckbox}>Bathroom</span>
+                                </label>
+                            </div>
+
+                            {/* type */}
+                            <h4 className={css.titleCheckbox}>Vehicle type</h4>
+                            <div className={css.checkbox}>
+                                <label className={css.checkboxLabel}>
+                                    <Field className={css.checkboxInput}
+                                        type="checkbox"
+                                        name="AC"
+                                        checked={filters.equipment.ac}
+                                        onChange={handleCheckboxChange}
+                                    />
+                                    <span className={css.customCheckbox}>Van</span> {/* Текст внутри чекбокса */}
+                                </label>
+
+                                <label className={css.checkboxLabel}>
+                                    <Field className={css.checkboxInput}
+                                        type="checkbox"
+                                        name="transmission"
+                                        checked={filters.equipment.transmission === "automatic"}
+                                        onChange={handleCheckboxChange}
+                                    />
+                                    <span className={css.customCheckbox}>Fully Integrated</span>
+                                </label>
+                                
+                                <label className={css.checkboxLabel}>
+                                    <Field className={css.checkboxInput}
+                                        type="checkbox"
+                                        name="kitchen"
+                                        checked={filters.equipment.kitchen}
+                                        onChange={handleCheckboxChange}
+                                    />
+                                    <span className={css.customCheckbox}>Alcove</span>
                                 </label>
                             </div>
                         </div>
