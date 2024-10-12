@@ -5,10 +5,10 @@ const filtersSlice = createSlice({
     initialState: {
         location: "",
         equipment: {
-            ac: false,
-            automatic: false,
+            AC: false,
+            transmission: "",
             kitchen: false,
-            tv: false,
+            TV: false,
             bathroom: false
         }
     },

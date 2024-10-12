@@ -11,7 +11,7 @@ import Catalog from '../../pages/Catalog/Catalog';
 
 function App() {
   const dispatch = useDispatch();
-  const campers = useSelector(filteredCampers);
+  // const campers = useSelector(filteredCampers);
   const isLoading = useSelector(selectLoading);
   const error = useSelector(selectError);
   
@@ -33,7 +33,7 @@ function App() {
       <Navigation/>
       <Routes>
         <Route path='/' element={<HomePage />} />
-        <Route path='/catalog' element={<Catalog campers={campers} />} />
+        <Route path='/catalog' element={<Catalog/>} />
       </Routes>
     </div>
   )

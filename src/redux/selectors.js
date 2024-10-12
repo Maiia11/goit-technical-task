@@ -11,7 +11,11 @@ export const filteredCampers = createSelector(
     return campers.filter(camper => {
       const matchesLocation = camper.location.toLowerCase().includes(filters.location.toLowerCase());
 
-    const matchesEquipment = Object.entries(filters.equipment).every(([key, value]) => {
+      const matchesEquipment = Object.entries(filters.equipment).every(([key, value]) => {
+        if (key === "transmission") {
+          // Проверяем только если чекбокс "Automatic" установлен
+          return !value || camper.transmission === "automatic";
+        }
         if (value === true) {
           return camper[key] === value;
         }
