@@ -1,5 +1,5 @@
 import { Field, Form, Formik } from "formik"
-import { useId } from "react";
+import { useEffect, useId, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectFilters } from "../../redux/selectors";
 import { chooseLocation, setEquipmentFilter } from "../../redux/filtersSlice";
@@ -10,19 +10,30 @@ import css from "./FilterForm.module.css"
 const FilterForm = () => {
     const dispatch = useDispatch();
     const filter = useSelector(selectFilters);
-    console.log(filter);
+   
     
-    
-    const initialValues = {
+    const [formValues, setFormValues] = useState({
         location: filter.location || "",
-        ac: filter.equipment.ac,
-        automatic: filter.equipment.automatic,
-        kitchen: filter.equipment.kitchen,
-        tv: filter.equipment.tv,
-        bathroom: filter.equipment.bathroom
-    };
+        ac: filter.equipment.ac || false,
+        automatic: filter.equipment.automatic || false,
+        kitchen: filter.equipment.kitchen || false,
+        tv: filter.equipment.tv || false,
+        bathroom: filter.equipment.bathroom || false
+    });
+
+    
+    
+    // const initialValues = {
+    //     location: filter.location || "",
+    //     ac: filter.equipment.ac || false,
+    //     automatic: filter.equipment.automatic || false,
+    //     kitchen: filter.equipment.kitchen || false,
+    //     tv: filter.equipment.tv || false,
+    //     bathroom: filter.equipment.bathroom || false,
+    // };
    
     const handleSubmit = (values) => {
+        console.log("Submitted values:", values);
         dispatch(chooseLocation(values.location));
         dispatch(setEquipmentFilter({
             ac: values.ac,
@@ -33,11 +44,22 @@ const FilterForm = () => {
         }));
     };
 
+     useEffect(() => {
+        setFormValues({
+            location: filter.location || "",
+            ac: filter.equipment.ac || false,
+            automatic: filter.equipment.automatic || false,
+            kitchen: filter.equipment.kitchen || false,
+            tv: filter.equipment.tv || false,
+            bathroom: filter.equipment.bathroom || false
+        });
+    }, [filter]);
+
 
     const locationFieldId = useId();
     return (
       <>
-            <Formik initialValues={initialValues} onSubmit={handleSubmit}>
+            <Formik initialValues={formValues} onSubmit={handleSubmit}>
                 
                 <Form className={css.formLocation}>
                     {/* location */}

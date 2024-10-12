@@ -11,12 +11,7 @@ import Catalog from '../../pages/Catalog/Catalog';
 
 function App() {
   const dispatch = useDispatch();
-  // const campers = useSelector(selectCampers);
   const campers = useSelector(filteredCampers);
- console.log("Campers:", campers);
-  
-
-
   const isLoading = useSelector(selectLoading);
   const error = useSelector(selectError);
   
