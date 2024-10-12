@@ -1,7 +1,7 @@
 
 import { useDispatch, useSelector } from 'react-redux'
 import './App.css'
-import { selectCampers, selectError, selectLoading } from '../../redux/selectors';
+import { filteredCampers, selectError, selectLoading } from '../../redux/selectors';
 import { useEffect } from 'react';
 import { fetchCampers } from '../../redux/operations';
 import { Route, Routes } from 'react-router-dom';
@@ -11,7 +11,8 @@ import Catalog from '../../pages/Catalog/Catalog';
 
 function App() {
   const dispatch = useDispatch();
-  const campers = useSelector(selectCampers);
+  // const campers = useSelector(selectCampers);
+  const campers = useSelector(filteredCampers);
  console.log("Campers:", campers);
   
 
@@ -31,8 +32,6 @@ function App() {
     return <div>Error: {error}</div>;
   }
 
-  console.log("Campers:", campers);
- 
 
   return (
     <div>

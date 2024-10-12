@@ -1,0 +1,23 @@
+.formLocation{
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    height: 88px;
+    gap: 8px;
+}
+
+.locationLabel{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #6c717b;
+}
+
+.locationInput{
+    border-radius: 12px;
+    padding: 18px 218px 18px 20px;
+    width: 360px;
+    height: 56px;
+    background-color: #f7f7f7;
+    border: #f7f7f7;
+}
