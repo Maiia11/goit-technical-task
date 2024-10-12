@@ -20,4 +20,15 @@
     height: 56px;
     background-color: #f7f7f7;
     border: #f7f7f7;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #101828;
+}
+
+.title{
+    font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #475467;
 }
