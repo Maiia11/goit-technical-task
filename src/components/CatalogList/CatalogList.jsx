@@ -25,8 +25,8 @@ const CatalogList = ({ camper }) => {
                   <div className={css.bagesContainer}>
                       <p className={css.bages}>{transmission}</p>
                       <p className={css.bages}>{engine}</p>
-                      <p className={css.bages}> {kitchen}</p>
-                      <p className={css.bages}>{AC}</p>
+                      {kitchen && <p className={css.bages}> Kitchen </p>}
+                      {AC && <p className={css.bages}>AC</p>}
                   </div>
                   <button className={css.btn} type="button">Show more</button>
               </div>
