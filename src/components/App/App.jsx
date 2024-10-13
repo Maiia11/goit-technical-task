@@ -1,17 +1,17 @@
 
 import { useDispatch, useSelector } from 'react-redux'
 import './App.css'
-import { filteredCampers, selectError, selectLoading } from '../../redux/selectors';
+import { selectError, selectLoading } from '../../redux/selectors';
 import { useEffect } from 'react';
 import { fetchCampers } from '../../redux/operations';
 import { Route, Routes } from 'react-router-dom';
 import HomePage from '../../pages/HomePage/HomePage';
 import Navigation from '../Navigation/Navigation';
 import Catalog from '../../pages/Catalog/Catalog';
+import CamperDetaills from '../../pages/CamperDetails/CamperDetaills';
 
 function App() {
   const dispatch = useDispatch();
-  // const campers = useSelector(filteredCampers);
   const isLoading = useSelector(selectLoading);
   const error = useSelector(selectError);
   
@@ -33,7 +33,8 @@ function App() {
       <Navigation/>
       <Routes>
         <Route path='/' element={<HomePage />} />
-        <Route path='/catalog' element={<Catalog/>} />
+        <Route path='/catalog' element={<Catalog />} />
+        <Route path='/catalog/:id' element={<CamperDetaills/>} />
       </Routes>
     </div>
   )

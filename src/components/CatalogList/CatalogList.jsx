@@ -1,8 +1,16 @@
+import { useNavigate } from "react-router-dom";
 import css from "./CatalogeList.module.css"
 
 const CatalogList = ({ camper }) => {
-    const {gallery: [{ original }], name, price, rating, reviews, location, description, transmission, engine, kitchen, AC
+    const {gallery: [{ original }], id, name, price, rating, reviews, location, description, transmission, engine, kitchen, AC
     } = camper;
+
+    const navigate = useNavigate();
+
+    const handleShowMore = () => {
+        navigate(`/catalog/${id}`)   
+    }
+
   return (
       <div className={css.card}>
           <div className={css.containerContent}>
@@ -28,7 +36,7 @@ const CatalogList = ({ camper }) => {
                       {kitchen && <p className={css.bages}> Kitchen </p>}
                       {AC && <p className={css.bages}>AC</p>}
                   </div>
-                  <button className={css.btn} type="button">Show more</button>
+                  <button className={css.btn} type="button" onClick={handleShowMore}>Show more</button>
               </div>
           </div>
     </div>
