@@ -1,0 +1,9 @@
+.container{
+    display: flex;
+    
+}
+
+.containerCatalog{
+    width: 888px;
+    height: 1568px;
+}

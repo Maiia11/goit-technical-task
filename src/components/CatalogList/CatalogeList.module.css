@@ -1,0 +1,92 @@
+.card{
+    border: 1px solid #dadde1;
+    border-radius: 20px;
+    padding: 24px;
+    width: 888px;
+    height: 368px;
+    background: #fff;
+    margin-bottom: 32px;
+    padding: 24px;
+}
+
+.containerContent{
+    width: 840px;
+    height: 320px;
+    display: flex;
+    gap: 24px;
+}
+
+.img{
+    border-radius: 10px;
+    width: 292px;
+    height: 320px;
+    object-fit: cover;
+}
+
+.titleCard{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.33333;
+    color: #101828;
+    width: 524px;
+    height: 32px;
+    margin-bottom: 8px;
+}
+
+.details{
+    display: flex;
+    width: 267px;
+    height: 24px;
+    gap: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #101828;
+    margin-bottom: 24px;
+}
+
+.text{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #475467;
+    margin-bottom: 24px;
+}
+
+.bagesContainer{
+    width: 524px;
+    height: 104px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.bages{
+    border-radius: 100px;
+        padding: 12px 18px;
+        width: 143px;
+        height: 48px;
+        background-color: #f2f4f7;
+        font-weight: 500;
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: center;
+            color: #101828;
+           
+}
+
+.btn{
+    border-radius: 200px;
+        width: 166px;
+        height: 56px;
+        background: #e44848;
+        font-weight: 500;
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: -0.01em;
+            color: #fff;
+            margin-top: 24px;
+}
+
