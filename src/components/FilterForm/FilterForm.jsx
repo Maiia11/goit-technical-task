@@ -17,7 +17,7 @@ const FilterForm = () => {
                 console.log("values", values );
                 dispatch(chooseLocation(values.location));
                 dispatch(setEquipmentFilter(values.equipment));
-                dispatch(setVechicleType(values.vehicleType));
+                dispatch(setVechicleType(values.form));
             }}
         >
             {() => {
@@ -95,7 +95,7 @@ const FilterForm = () => {
                                 <label className={css.checkboxLabel}>
                                     <Field className={css.checkboxInput}
                                         type="radio"
-                                        name="vehicleType"
+                                        name="form"
                                         value="panelTruck"
                                         
                                     />
@@ -105,7 +105,7 @@ const FilterForm = () => {
                                 <label className={css.checkboxLabel}>
                                     <Field className={css.checkboxInput}
                                         type="radio"
-                                        name="vehicleType"
+                                        name="form"
                                         value="fullyIntegrated"
                                         
                                     />
@@ -115,7 +115,7 @@ const FilterForm = () => {
                                 <label className={css.checkboxLabel}>
                                     <Field className={css.checkboxInput}
                                         type="radio"
-                                        name="vehicleType"
+                                        name="form"
                                         value="alcove"
                         
                                     />

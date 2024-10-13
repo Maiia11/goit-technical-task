@@ -11,7 +11,7 @@ const filtersSlice = createSlice({
             TV: false,
             bathroom: false
         },
-        vechicleType: ""
+        form: ""
     },
     reducers: {
         chooseLocation(state, action) {
@@ -24,7 +24,7 @@ const filtersSlice = createSlice({
             };
         },
         setVechicleType(state, action) {
-            state.vechicleType = action.payload;
+            state.form = action.payload;
         }
     }
 }) 

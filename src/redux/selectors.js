@@ -21,9 +21,9 @@ export const filteredCampers = createSelector(
         }
         return true;
       });
-      const matchesVehicleType = filters.vehicleType ? camper.form === filters.vehicleType : true;
+      const matchesForm = filters.form ? camper.form === filters.form : true;
 
-      return matchesLocation && matchesEquipment && matchesVehicleType;
+      return matchesLocation && matchesEquipment && matchesForm;
     });
   }
 );
