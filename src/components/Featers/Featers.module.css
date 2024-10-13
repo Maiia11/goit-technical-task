@@ -2,6 +2,46 @@
 border-radius: 10px;
     padding: 44px 80px;
     width: 631px;
-    height: 588px;
+    height: auto;
     background-color: #f7f7f7;
 }
+
+.bagesContainer {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.bages {
+    border-radius: 100px;
+    padding: 12px 18px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    color: #101828;
+    flex-grow: 1;
+    background-color: #f2f4f7;
+
+}
+
+.titleDetails{
+    font-weight: 600;
+        font-size: 20px;
+        line-height: 1.2;
+        color: #101828;
+        margin-top: 100px;
+        margin-bottom: 16px;
+}
+
+.details{
+display: flex;
+justify-content: space-between;
+font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    color: #101828;
+}
+
