@@ -10,7 +10,8 @@ const filtersSlice = createSlice({
             kitchen: false,
             TV: false,
             bathroom: false
-        }
+        },
+        vechicleType: ""
     },
     reducers: {
         chooseLocation(state, action) {
@@ -21,9 +22,12 @@ const filtersSlice = createSlice({
                 ...state.equipment,
                 ...action.payload
             };
+        },
+        setVechicleType(state, action) {
+            state.vechicleType = action.payload;
         }
     }
 }) 
 
-export const { chooseLocation, setEquipmentFilter} = filtersSlice.actions;
+export const { chooseLocation, setEquipmentFilter, setVechicleType} = filtersSlice.actions;
 export const filtersReducer = filtersSlice.reducer;

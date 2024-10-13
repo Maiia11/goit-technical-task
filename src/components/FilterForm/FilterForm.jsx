@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { selectFilters } from "../../redux/selectors";
-import { chooseLocation, setEquipmentFilter } from "../../redux/filtersSlice";
+import { chooseLocation, setEquipmentFilter, setVechicleType } from "../../redux/filtersSlice";
 import { Field, Form, Formik } from "formik";
 import css from './FilterForm.module.css'
 
@@ -17,6 +17,13 @@ const FilterForm = () => {
     dispatch(setEquipmentFilter({ [name]: checked }));  // Обновляем состояние чекбоксов
     };
     
+    const handleRadioChange = (e) => {
+        dispatch(setVechicleType(e.target.value));
+    };
+
+    const handleSubmit = (values) => {
+        
+    }
 
 
     return (
@@ -103,35 +110,39 @@ const FilterForm = () => {
                             <div className={css.checkbox}>
                                 <label className={css.checkboxLabel}>
                                     <Field className={css.checkboxInput}
-                                        type="checkbox"
-                                        name="AC"
-                                        checked={filters.equipment.ac}
-                                        onChange={handleCheckboxChange}
+                                        type="radio"
+                                        name="vehicleType"
+                                        value="panelTruck"
+                                        checked={filters.vehicleType === "panelTruck"}
+                                        onChange={handleRadioChange}
                                     />
                                     <span className={css.customCheckbox}>Van</span> {/* Текст внутри чекбокса */}
                                 </label>
 
                                 <label className={css.checkboxLabel}>
                                     <Field className={css.checkboxInput}
-                                        type="checkbox"
-                                        name="transmission"
-                                        checked={filters.equipment.transmission === "automatic"}
-                                        onChange={handleCheckboxChange}
+                                        type="radio"
+                                        name="vehicleType"
+                                        value="fullyIntegrated"
+                                        checked={filters.vehicleType === "fullyIntegrated"}
+                                        onChange={handleRadioChange}
                                     />
                                     <span className={css.customCheckbox}>Fully Integrated</span>
                                 </label>
                                 
                                 <label className={css.checkboxLabel}>
                                     <Field className={css.checkboxInput}
-                                        type="checkbox"
-                                        name="kitchen"
-                                        checked={filters.equipment.kitchen}
-                                        onChange={handleCheckboxChange}
+                                        type="radio"
+                                        name="vehicleType"
+                                        value="alcove"
+                                        checked={filters.vehicleType === "alcove"}
+                                        onChange={handleRadioChange}
                                     />
                                     <span className={css.customCheckbox}>Alcove</span>
                                 </label>
                             </div>
                         </div>
+                        <button type="submit">Search</button>
                     </Form>
                 );
             }}
