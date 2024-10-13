@@ -52,10 +52,11 @@ const CamperDetaills = () => {
         <button className={css.btn} onClick={() => setActiveTab('reviews')}>Reviews</button>
           </div>
           
+            <div className={css.containerInfo}>
           {camper && activeTab === 'features' ? <Features camper={camper} /> : <Reviews camper={camper} />}
 
                 <BookingForm />
-            
+            </div>
     </div>
   )
 }

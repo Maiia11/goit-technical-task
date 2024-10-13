@@ -71,3 +71,8 @@ font-weight: 600;
     background-color: #fff;
     margin-top: 60px;
 }
+
+.containerInfo{
+    display: flex;
+    gap: 40px;
+}

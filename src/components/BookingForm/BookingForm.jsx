@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import css from "./BookingForm.module.css"
 
 const BookingForm = () => {
   const [formData, setFormData] = useState({
@@ -19,9 +20,9 @@ const BookingForm = () => {
   };
 
   return (
-    <div>
-      <h3>Book your campervan now</h3>
-      <form onSubmit={handleSubmit}>
+    <div className={css.containerForm}>
+      <h3 className={css.title}>Book your campervan now</h3>
+      <form className={css.form} onSubmit={handleSubmit}>
         <input
           type="text"
           name="name"
