@@ -24,7 +24,7 @@ const BookingForm = () => {
     comment: e.target.comment.value,
   };
 
-  console.log("Form Data: ", formData);
+  
 
   // Після успішного відправлення форми
   alert("Booking successful!");

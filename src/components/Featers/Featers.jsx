@@ -1,7 +1,6 @@
 import css from "./Featers.module.css";
 
 const Features = ({ camper }) => {
-  console.log(camper);
   const {
     transmission,
     engine,
