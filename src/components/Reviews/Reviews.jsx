@@ -1,11 +1,14 @@
+import css from './Reviews.module.css'
+
 const Reviews = ({ camper }) => {
   return (
-    <div>
-      <h3>Reviews</h3>
+    <div className={css.container}>
       {camper.reviews.map((review, index) => (
         <div key={index}>
-          <p><strong>{review.author}</strong>: {review.comment}</p>
-          <p>Rating: {review.rating}</p>
+          <p className={css.name}><strong>{review.reviewer_name}</strong></p>
+          <p> {review.reviewer_rating}</p>
+          <p className={css.comment}>{review.comment}</p>
+          
         </div>
       ))}
     </div>
