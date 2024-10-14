@@ -9,7 +9,7 @@ import { Field, Form, Formik } from "formik";
 import css from "./FilterForm.module.css";
 import icons from "../../images/icons.svg";
 
-const FilterForm = () => {
+const FilterForm = ({ onFilterChange }) => {
   const dispatch = useDispatch();
   const filters = useSelector(selectFilters);
 
@@ -31,6 +31,7 @@ const FilterForm = () => {
         dispatch(chooseLocation(values.location));
         dispatch(setEquipmentFilter(values.equipment));
         dispatch(setVechicleType(values.form));
+        onFilterChange();
       }}
     >
       {() => {

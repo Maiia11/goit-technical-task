@@ -34,9 +34,13 @@ export const Catalog = () => {
     setCurrentPage((prevPage) => prevPage + 1);
   };
 
+  const handleFilterChange = () => {
+    setCurrentPage(0); // Сброс текущей страницы
+  };
+
   return (
     <div className={css.container}>
-      <FilterForm />
+      <FilterForm onFilterChange={handleFilterChange}/>
       <div>
         <div className={css.containerCatalog}>
           <ul>
