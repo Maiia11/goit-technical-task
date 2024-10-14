@@ -14,7 +14,53 @@
         color: #101828;
 }
 
+.parag{
+    font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #6c717b;
+        margin-top: 8px;
+}
+
 .form{
     display: flex;
     flex-direction: column;
+    width: 527px;
+    height: 420px;
+    gap: 14px;
+    margin-top: 24px;
+}
+
+.input{
+    border-radius: 12px;
+        padding: 18px 337px 18px 18px;
+        width: 527px;
+        height: 60px;
+        background: #f7f7f7;
+}
+
+.comment{
+    border-radius: 10px;
+        padding: 18px 308px 76px 18px;
+        width: 527px;
+        height: 118px;
+        background: #f7f7f7;
+}
+
+.btnContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.btn{
+    border-radius: 200px;
+        padding: 16px 60px;
+        width: 166px;
+        height: 56px;
+        background: #e44848;
+        font-weight: 500;
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: -0.01em;
+            color: #fff;
 }

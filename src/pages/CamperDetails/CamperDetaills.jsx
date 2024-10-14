@@ -35,8 +35,8 @@ const CamperDetaills = () => {
                 <div className={css.details}>
           <p className={css.reviews}>{`${camper.rating} (${camper.reviews.length} Reviews)`}</p>
           <p>{camper.location}</p>
-                </div>
-                <p className={css.price}>{camper.price}</p>
+          </div>
+          <p className={css.price}>{`€${camper.price}`}</p>
             </div>
 
             <div className={css.imgContainer}>
