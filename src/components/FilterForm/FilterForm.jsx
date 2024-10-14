@@ -19,12 +19,12 @@ const FilterForm = ({ onFilterChange }) => {
         location: filters.location,
         equipment: {
           AC: false,
-          transmission: '',
+          transmission: "",
           kitchen: false,
           TV: false,
           bathroom: false,
         },
-        form: '',
+        form: "",
       }}
       onSubmit={(values) => {
         console.log("values", values);
@@ -40,16 +40,17 @@ const FilterForm = ({ onFilterChange }) => {
             {/* Location */}
 
             <div className={css.formLocation}>
-              
               <h3 className={css.locationLabel}>Location</h3>
-              <Field
-                className={css.locationInput}
-                name="location"
-                placeholder="name of the city"
-              />
-              <svg width={20} height={20} fill="black">
-                <use href={`${icons}#icon-map`}></use>
-              </svg>
+              <div className={css.locationWrapper}>
+                <Field
+                  className={css.locationInput}
+                  name="location"
+                  placeholder="name of the city"
+                />
+                <svg className={css.icon} width={20} height={20} fill="#101828">
+                  <use href={`${icons}#icon-map`}></use>
+                </svg>
+              </div>
             </div>
 
             {/*  Filters*/}
@@ -66,7 +67,17 @@ const FilterForm = ({ onFilterChange }) => {
                     type="checkbox"
                     name="equipment.AC"
                   />
-                  <span className={css.customCheckbox}>AC</span>{" "}
+                  <span className={css.customCheckbox}>
+                    <svg
+                      className={css.iconCheckbox}
+                      width={20}
+                      height={20}
+                      fill="#101828"
+                    >
+                      <use href={`${icons}#icon-wind`}></use>
+                    </svg>
+                    AC
+                  </span>{" "}
                   {/* Текст внутри чекбокса */}
                 </label>
 
@@ -76,7 +87,17 @@ const FilterForm = ({ onFilterChange }) => {
                     type="checkbox"
                     name="equipment.transmission"
                   />
-                  <span className={css.customCheckbox}>Automatic</span>
+                  <span className={css.customCheckbox}>
+                    <svg
+                      className={css.iconCheckbox}
+                      width={20}
+                      height={20}
+                      fill="#101828"
+                    >
+                      <use href={`${icons}#icon-diagram`}></use>
+                    </svg>
+                    Automatic
+                  </span>
                 </label>
 
                 <label className={css.checkboxLabel}>
@@ -85,7 +106,17 @@ const FilterForm = ({ onFilterChange }) => {
                     type="checkbox"
                     name="equipment.kitchen"
                   />
-                  <span className={css.customCheckbox}>Kitchen</span>
+                  <span className={css.customCheckbox}>
+                    <svg
+                      className={css.iconCheckbox}
+                      width={20}
+                      height={20}
+                      fill="#101828"
+                    >
+                      <use href={`${icons}#icon-cup`}></use>
+                    </svg>
+                    Kitchen
+                  </span>
                 </label>
 
                 <label className={css.checkboxLabel}>
@@ -94,7 +125,17 @@ const FilterForm = ({ onFilterChange }) => {
                     type="checkbox"
                     name="equipment.TV"
                   />
-                  <span className={css.customCheckbox}>TV</span>
+                  <span className={css.customCheckbox}>
+                    <svg
+                      className={css.iconCheckbox}
+                      width={20}
+                      height={20}
+                      fill="#101828"
+                    >
+                      <use href={`${icons}#icon-tv`}></use>
+                    </svg>
+                    TV
+                  </span>
                 </label>
 
                 <label className={css.checkboxLabel}>
@@ -103,7 +144,17 @@ const FilterForm = ({ onFilterChange }) => {
                     type="checkbox"
                     name="equipment.bathroom"
                   />
-                  <span className={css.customCheckbox}>Bathroom</span>
+                  <span className={css.customCheckbox}>
+                    <svg
+                      className={css.iconCheckbox}
+                      width={20}
+                      height={20}
+                      fill="#101828"
+                    >
+                      <use href={`${icons}#icon-bathroom`}></use>
+                    </svg>
+                    Bathroom
+                  </span>
                 </label>
               </div>
             </div>
@@ -118,7 +169,16 @@ const FilterForm = ({ onFilterChange }) => {
                     name="form"
                     value="panelTruck"
                   />
-                  <span className={css.customCheckbox}>Van</span>{" "}
+                  <span className={css.customCheckbox}>
+                    <svg
+                      className={css.iconCheckbox}
+                      width={20}
+                      height={20}
+                      fill="#101828"
+                    >
+                      <use href={`${icons}#icon-bi_grid-2`}></use>
+                    </svg>
+                    Van</span>{" "}
                   {/* Текст внутри чекбокса */}
                 </label>
 
@@ -129,7 +189,16 @@ const FilterForm = ({ onFilterChange }) => {
                     name="form"
                     value="fullyIntegrated"
                   />
-                  <span className={css.customCheckbox}>Fully Integrated</span>
+                  <span className={css.customCheckbox}>
+                    <svg
+                      className={css.iconCheckbox}
+                      width={20}
+                      height={20}
+                      fill="#101828"
+                    >
+                      <use href={`${icons}#icon-bi_grid`}></use>
+                    </svg>
+                    Fully Integrated</span>
                 </label>
 
                 <label className={css.checkboxLabel}>
@@ -139,7 +208,16 @@ const FilterForm = ({ onFilterChange }) => {
                     name="form"
                     value="alcove"
                   />
-                  <span className={css.customCheckbox}>Alcove</span>
+                  <span className={css.customCheckbox}>
+                    <svg
+                      className={css.iconCheckbox}
+                      width={20}
+                      height={20}
+                      fill="#101828"
+                    >
+                      <use href={`${icons}#icon-bi_grid-3`}></use>
+                    </svg>
+                    Alcove</span>
                 </label>
               </div>
             </div>

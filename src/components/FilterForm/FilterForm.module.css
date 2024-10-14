@@ -2,11 +2,15 @@
     display: flex;
     flex-direction: column;
     width: 360px;
-    height: 88px;
+    height: auto;
     gap: 8px;
 }
 .icon{
     fill: black;
+    position: absolute;
+    top: 18px;
+    left: 20px;
+
 }
 .locationLabel{
     font-weight: 400;
@@ -16,9 +20,13 @@
     margin: 0;
 }
 
+.locationWrapper{
+    position: relative;
+    margin-bottom: 40px;
+}
+
 .locationInput{
     border-radius: 12px;
-    padding: 18px 218px 18px 20px;
     width: 360px;
     height: 56px;
     background-color: #f7f7f7;
@@ -27,6 +35,7 @@
     font-size: 16px;
     line-height: 1.5;
     color: #101828;
+    padding-left: 41px;
 }
 
 .title{
@@ -74,26 +83,32 @@ height: 272px;
     cursor: pointer;
 }
 
+.iconCheckbox{
+margin-bottom: 5px;
+}
 /* Стили для кастомного чекбокса */
 .customCheckbox {
     border: 1px solid #dadde1;
-    /* Стандартный бордер */
-    border-radius: 12px;
-    width: 112px;
-    height: 96px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: -0.01em;
-    text-align: center;
-    color: #101828;
-    display: flex;
-    /* Центрируем текст */
-    align-items: center;
-    justify-content: center;
-    /* Центрируем текст */
-    transition: border 0.3s;
-    /* Плавный переход для бордера */
+        /* Стандартный бордер */
+        border-radius: 12px;
+        width: 112px;
+        height: 96px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: -0.01em;
+        text-align: center;
+        color: #101828;
+        display: flex;
+        /* Центрируем содержимое */
+        flex-direction: column;
+        /* Вертикальное расположение иконки и текста */
+        align-items: center;
+        /* Центрируем текст по горизонтали */
+        justify-content: center;
+        /* Центрируем текст по вертикали */
+        transition: border 0.3s;
+        /* Плавный переход для бордера */
 }
 
 /* Стили при выборе чекбокса */
