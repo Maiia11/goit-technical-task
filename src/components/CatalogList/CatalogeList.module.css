@@ -67,6 +67,10 @@
     flex-wrap: wrap;
 }
 
+.iconBages{
+    margin-right: 4px;
+}
+
 .bages{
     border-radius: 100px;
     padding: 12px 18px;

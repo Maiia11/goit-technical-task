@@ -10,7 +10,7 @@ import Navigation from '../Navigation/Navigation';
 import Catalog from '../../pages/Catalog/Catalog';
 import CamperDetaills from '../../pages/CamperDetails/CamperDetaills';
 import NotFound from '../../pages/NotFound/NotFound';
-import { loadFavorites } from '../../redux/favoritesSlice';
+
 
 function App() {
   const dispatch = useDispatch();
@@ -19,8 +19,6 @@ function App() {
   
   useEffect(() => {
     dispatch(fetchCampers());
-    const favorites = JSON.parse(localStorage.getItem('favorites')) || []; // Загружаем избранные кемперы из localStorage
-    dispatch(loadFavorites(favorites)); // Загружаем избранные в Redux
   }, [dispatch])
 
   if (isLoading) {
