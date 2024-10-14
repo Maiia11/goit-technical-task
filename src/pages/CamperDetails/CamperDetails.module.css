@@ -12,7 +12,11 @@ font-weight: 600;
 }
 .details{
     display: flex;
-    gap: 16px;
+    
+}
+
+.iconCheckbox {
+    margin-right: 4px;
 }
 
 .reviews{
@@ -22,6 +26,7 @@ font-weight: 600;
         text-decoration: underline;
         text-decoration-skip-ink: none;
         color: #101828;
+        margin-right: 16px;
         
 }
 

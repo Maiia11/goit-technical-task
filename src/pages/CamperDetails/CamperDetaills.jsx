@@ -7,6 +7,7 @@ import Reviews from "../../components/Reviews/Reviews";
 import BookingForm from "../../components/BookingForm/BookingForm";
 import css from "./CamperDetails.module.css"
 import CamperNotFound from "../../components/CamperNotFound/CamperNotFound";
+import icons from "../../images/icons.svg";
 
 
 const CamperDetaills = () => {
@@ -43,7 +44,15 @@ const CamperDetaills = () => {
      <div className={css.container}>
           <div>
                 <h2 className={css.tittle}>{camper.name}</h2>
-                <div className={css.details}>
+          <div className={css.details}>
+            <svg
+                      className={css.iconCheckbox}
+                      width={16}
+                      height={16}
+                      fill="#ffc531"
+                    >
+                      <use href={`${icons}#icon-rating`}></use>
+                    </svg>
           <p className={css.reviews}>{`${camper.rating} (${camper.reviews.length} Reviews)`}</p>
           <p>{camper.location}</p>
           </div>
