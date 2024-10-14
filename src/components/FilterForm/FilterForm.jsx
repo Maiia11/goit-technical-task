@@ -27,7 +27,7 @@ const FilterForm = ({ onFilterChange }) => {
         form: "",
       }}
       onSubmit={(values) => {
-        console.log("values", values);
+        
         dispatch(chooseLocation(values.location));
         dispatch(setEquipmentFilter(values.equipment));
         dispatch(setVechicleType(values.form));

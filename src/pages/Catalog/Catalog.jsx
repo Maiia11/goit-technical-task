@@ -21,7 +21,7 @@ export const Catalog = () => {
     }
   }, [currentPage, campers]);
 
-  console.log(campers);
+  
   if (!Array.isArray(campers) || campers.length === 0) {
     return <p>No cars available</p>;
   }
