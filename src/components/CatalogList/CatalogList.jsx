@@ -20,7 +20,7 @@ const CatalogList = ({ camper }) => {
               <div>
                   <div className={css.titleCard}>
                       <h3>{name}</h3>
-                      <p>{price}</p>
+                      <p>{`€${price}`}</p>
                   </div>
                   
                   <div className={css.details}>
