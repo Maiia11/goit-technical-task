@@ -64,13 +64,46 @@ font-weight: 600;
         margin-top: 28px;
 }
 
-.btn{
-font-weight: 600;
+.containerLink{
+    margin-top: 60px;
+    margin-bottom: 56px;
+    width: 1312px;
+    height: 48px;
+    display: flex;
+    position: relative;
+    border-bottom: 1px solid lightgray;
+}
+.containerLink a{
+   font-weight: 600;
     font-size: 20px;
     line-height: 1.2;
     color: #101828;
     background-color: #fff;
-    margin-top: 60px;
+    margin-right: 40px;
+    padding: 10px 20px;
+        text-decoration: none;
+        color: black;
+        position: relative;
+    
+}
+
+.containerLink a.active::after {
+    content: '';
+    position: absolute;
+    left: 10%;
+    bottom: -2px;
+    width: 98px;
+        /* Ширина полоски */
+        height: 6px;
+        /* Высота полоски */
+    background-color: #E44848;
+    transition: all 0.3s ease;
+
+}
+
+.containerLink a:hover {
+    color:#E44848;
+    /* Это для эффекта наведения, если нужно */
 }
 
 .containerInfo{

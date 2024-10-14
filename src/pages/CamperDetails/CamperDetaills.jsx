@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import { filteredCampers } from "../../redux/selectors";
 import { useEffect, useState } from "react";
 import Features from "../../components/Featers/Featers";
@@ -47,10 +47,20 @@ const CamperDetaills = () => {
 
             <p className={css.description}> {camper.description}</p>
             
-          <div>
-                <button className={css.btn} onClick={() => setActiveTab('features')}>Features</button>
-        <button className={css.btn} onClick={() => setActiveTab('reviews')}>Reviews</button>
-          </div>
+          <div className={css.containerLink}>
+      <a 
+        className={`${css.btn} ${activeTab === 'features' ? css.active : ''}`} 
+        onClick={() => setActiveTab('features')}
+      >
+        Features
+      </a>
+      <a 
+        className={`${css.btn} ${activeTab === 'reviews' ? css.active : ''}`} 
+        onClick={() => setActiveTab('reviews')}
+      >
+        Reviews
+      </a>
+    </div>
           
             <div className={css.containerInfo}>
           {camper && activeTab === 'features' ? <Features camper={camper} /> : <Reviews camper={camper} />}
