@@ -15,7 +15,17 @@ const FilterForm = () => {
 
   return (
     <Formik
-      initialValues={filters}
+      initialValues={{
+        location: filters.location,
+        equipment: {
+          AC: false,
+          transmission: '',
+          kitchen: false,
+          TV: false,
+          bathroom: false,
+        },
+        form: '',
+      }}
       onSubmit={(values) => {
         console.log("values", values);
         dispatch(chooseLocation(values.location));
@@ -53,7 +63,7 @@ const FilterForm = () => {
                   <Field
                     className={css.checkboxInput}
                     type="checkbox"
-                    name="AC"
+                    name="equipment.AC"
                   />
                   <span className={css.customCheckbox}>AC</span>{" "}
                   {/* Текст внутри чекбокса */}
@@ -63,7 +73,7 @@ const FilterForm = () => {
                   <Field
                     className={css.checkboxInput}
                     type="checkbox"
-                    name="transmission"
+                    name="equipment.transmission"
                   />
                   <span className={css.customCheckbox}>Automatic</span>
                 </label>
@@ -72,7 +82,7 @@ const FilterForm = () => {
                   <Field
                     className={css.checkboxInput}
                     type="checkbox"
-                    name="kitchen"
+                    name="equipment.kitchen"
                   />
                   <span className={css.customCheckbox}>Kitchen</span>
                 </label>
@@ -81,7 +91,7 @@ const FilterForm = () => {
                   <Field
                     className={css.checkboxInput}
                     type="checkbox"
-                    name="TV"
+                    name="equipment.TV"
                   />
                   <span className={css.customCheckbox}>TV</span>
                 </label>
@@ -90,7 +100,7 @@ const FilterForm = () => {
                   <Field
                     className={css.checkboxInput}
                     type="checkbox"
-                    name="bathroom"
+                    name="equipment.bathroom"
                   />
                   <span className={css.customCheckbox}>Bathroom</span>
                 </label>

@@ -6,6 +6,7 @@ import Features from "../../components/Featers/Featers";
 import Reviews from "../../components/Reviews/Reviews";
 import BookingForm from "../../components/BookingForm/BookingForm";
 import css from "./CamperDetails.module.css"
+import CamperNotFound from "../../components/CamperNotFound/CamperNotFound";
 
 
 const CamperDetaills = () => {
@@ -13,15 +14,25 @@ const CamperDetaills = () => {
     const { id } = useParams();
     const campers = useSelector(filteredCampers);
     const [camper, setCamper] = useState(null);
-    const [activeTab, setActiveTab] = useState('features');
+  const [activeTab, setActiveTab] = useState('features');
+   const [error, setError] = useState(null);
 
     useEffect(() => {
         const selectCamper = campers.find(camp => camp.id === id);
         
         if (selectCamper) {
-            setCamper(selectCamper);
+          setCamper(selectCamper);
+          setError(null)
+        } else {
+            setCamper(null); // Сбросьте camper, если не найден
+            setError(<CamperNotFound/>); // Установите сообщение об ошибке
         }
     }, [id, campers])
+  
+  if (error) {
+        return <p>{error}</p>; // Отображение сообщения об ошибке
+    }
+  
 
     if (!camper) {
         return <p>Loading...</p>

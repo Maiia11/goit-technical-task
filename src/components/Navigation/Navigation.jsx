@@ -2,6 +2,8 @@ import { NavLink } from "react-router-dom"
 import css from './Navigation.module.css'
 
 const Navigation = () => {
+
+
     return (
         <div className={css.container}>
            <p className={css.title}>Travel<span className={css.span}>Tracks</span> </p> 
