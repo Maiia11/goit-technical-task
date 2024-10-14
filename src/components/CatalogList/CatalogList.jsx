@@ -3,6 +3,8 @@ import css from "./CatalogeList.module.css"
 import { toggleFavorite } from "../../utils/toggleFavorite";
 import { useDispatch, useSelector } from "react-redux";
 
+import icons from "../../images/icons.svg";
+
 const CatalogList = ({ camper }) => {
     const {gallery: [{ original }], id, name, price, rating, reviews, location, description, transmission, engine, kitchen, AC
     } = camper;
@@ -37,11 +39,19 @@ const CatalogList = ({ camper }) => {
                       <p>{`€${price}`}</p>
                       <button onClick={handleToggleFavorite}>
               {isFavorite ? "⭐" : "☆"} {/* Изменяем иконку в зависимости от состояния */}
-            </button>
+              </button>
                   </div>
                   
                   <div className={css.details}>
-                      <p>{`${rating} (${reviews.length} Reviews)`}</p>
+                      <svg
+                      className={css.iconCheckbox}
+                      width={16}
+                      height={16}
+                      fill="#ffc531"
+                    >
+                      <use href={`${icons}#icon-rating`}></use>
+                    </svg>
+                      <p className={css.reviews}>{`${rating} (${reviews.length} Reviews)`}</p>
                       <p>{location}</p>
                   </div>
 
