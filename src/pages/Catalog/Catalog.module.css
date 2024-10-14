@@ -1,9 +1,40 @@
 .container{
     display: flex;
+    height: auto;
+    padding: 64px;
     
 }
 
 .containerCatalog{
     width: 888px;
-    height: 1568px;
+    height: auto;
+    display: flex;
+        /* Добавляем Flexbox */
+        flex-direction: column;
+        /* Располагаем элементы по вертикали */
+        align-items: center;
+        /* Центрируем элементы по горизонтали */
+    }
+.buttonContainer {
+    display: flex;
+    /* Используем Flexbox для центрирования */
+    justify-content: center;
+    /* Центрируем по горизонтали */
+    margin-top: 20px;
+    /* Добавьте отступ сверху, если нужно */
+    height: auto;
+}
+
+.btn{
+    border: 1px solid #dadde1;
+    border-radius: 200px;
+    padding: 16px 32px;
+    width: 145px;
+    height: 56px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    color: #101828;
+    
 }
