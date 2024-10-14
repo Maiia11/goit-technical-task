@@ -1,15 +1,29 @@
 import { useNavigate } from "react-router-dom";
 import css from "./CatalogeList.module.css"
+import { toggleFavorite } from "../../utils/toggleFavorite";
+import { useDispatch, useSelector } from "react-redux";
 
 const CatalogList = ({ camper }) => {
     const {gallery: [{ original }], id, name, price, rating, reviews, location, description, transmission, engine, kitchen, AC
     } = camper;
 
+    
+
+
     const navigate = useNavigate();
+
+    const dispatch = useDispatch();
+  const favorites = useSelector((state) => state.favorites); 
 
     const handleShowMore = () => {
         navigate(`/catalog/${id}`)   
     }
+
+    const handleToggleFavorite = () => {
+    dispatch(toggleFavorite(id)); // Вызываем действие для добавления/удаления кемпера из избранного
+    };
+    
+    const isFavorite = favorites.includes(id);
 
   return (
       <div className={css.card}>
@@ -21,6 +35,9 @@ const CatalogList = ({ camper }) => {
                   <div className={css.titleCard}>
                       <h3>{name}</h3>
                       <p>{`€${price}`}</p>
+                      <button onClick={handleToggleFavorite}>
+              {isFavorite ? "⭐" : "☆"} {/* Изменяем иконку в зависимости от состояния */}
+            </button>
                   </div>
                   
                   <div className={css.details}>
