@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import css from "./BookingForm.module.css";
 
 const BookingForm = () => {
@@ -8,6 +8,7 @@ const BookingForm = () => {
     date: "",
     comment: "",
   });
+  const formRef = useRef(null);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -16,8 +17,20 @@ const BookingForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form Data: ", formData);
+    const formData = {
+    name: e.target.name.value,
+    email: e.target.email.value,
+    date: e.target.date.value,
+    comment: e.target.comment.value,
   };
+
+  console.log("Form Data: ", formData);
+
+  // Після успішного відправлення форми
+  alert("Booking successful!");
+  };
+
+
 
   return (
     <div className={css.containerForm}>
@@ -25,6 +38,7 @@ const BookingForm = () => {
       <p className={css.parag}>
         Stay connected! We are always ready to help you.
       </p>
+
       <form className={css.form} onSubmit={handleSubmit}>
         <input
           className={css.input}
@@ -73,6 +87,5 @@ const BookingForm = () => {
       </form>
     </div>
   );
-};
-
+}
 export default BookingForm;
