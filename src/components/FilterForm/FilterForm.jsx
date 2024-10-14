@@ -7,6 +7,7 @@ import {
 } from "../../redux/filtersSlice";
 import { Field, Form, Formik } from "formik";
 import css from "./FilterForm.module.css";
+import icons from "../../images/icons.svg";
 
 const FilterForm = () => {
   const dispatch = useDispatch();
@@ -35,8 +36,8 @@ const FilterForm = () => {
                 name="location"
                 placeholder="name of the city"
               />
-              <svg className={css.icon}>
-                <use href="../../images/icons.svg#"></use>
+              <svg width={20} height={20} fill="black">
+                <use href={`${icons}#icon-map`}></use>
               </svg>
             </div>
 
