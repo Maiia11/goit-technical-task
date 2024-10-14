@@ -28,12 +28,16 @@ const FilterForm = () => {
             {/* Location */}
 
             <div className={css.formLocation}>
+              
               <h3 className={css.locationLabel}>Location</h3>
               <Field
                 className={css.locationInput}
                 name="location"
                 placeholder="name of the city"
               />
+              <svg className={css.icon}>
+                <use href="../../images/icons.svg#"></use>
+              </svg>
             </div>
 
             {/*  Filters*/}

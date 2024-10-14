@@ -5,7 +5,9 @@
     height: 88px;
     gap: 8px;
 }
-
+.icon{
+    fill: black;
+}
 .locationLabel{
     font-weight: 400;
     font-size: 16px;
